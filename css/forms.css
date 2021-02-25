@@ -1,0 +1,118 @@
+form.form {
+    display: flex; /* to show content in column */ 
+    flex-direction: column;
+    padding: 42px 8px 18px 8px;
+    animation: anim 1.5s;
+}
+
+form.form a {
+    text-decoration: none;
+}
+
+.form_textbox {
+    border: 0; 
+    outline: 0; /* border whene selected */
+    border-bottom: 1px #2f2f31 solid;
+    font-size: 18px;
+    margin-top: 28px;
+    padding: 8px 0px;
+    background-color: #151516;
+    color: whitesmoke;
+}
+.form_textbox.match, .form_textbox.valid, .form_textbox.available {
+    border-bottom: 1px #4CAF50 solid;
+}
+.form_textbox.notMatch, .form_textbox.invalid, .form_textbox.notAvailable {
+    border-bottom: 1px #BF372E solid;
+}
+
+.form_textbox::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(155, 155, 155, 0.6);
+    opacity: 1; /* Firefox */
+}
+  
+.form_textbox :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(155, 155, 155, 0.6);
+}
+  
+.form_textbox ::-ms-input-placeholder { /* Microsoft Edge */    
+    color: rgb(155, 155, 155, 0.6);
+}
+
+.form_button {
+    margin-top: 42px;
+    height: 48px;
+    border: none;
+    outline:none;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2f2f31;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.red {
+    background-color: #BF372E;
+}
+
+.orange {
+    background-color: #ff6d00;
+}
+
+.yellow {
+    background-color: #ffab00;
+}
+
+.green {
+    background-color: #4CAF50;
+}
+
+.form_button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.form_change a {
+    color: #BF372E;
+}
+
+.form_change a:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form.reg.hide, .form.auth.hide {
+    display: none;
+}
+
+.form.reg, .form.auth {
+    display: flex;
+}
+
+.form_msg_container {
+    display: flex;
+    align-items:center;
+    margin: 12px 0px;
+    padding: 0px;
+    animation: anim 1.5s;
+}
+.form_icon {
+    width: 32px;
+    height: 32px;
+}
+.form_msg {
+    margin: 0px 10px;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box; /* padding and border are included in the width and height */
+}
+
+body {
+    background-color: whitesmoke; 
+    color: rgb(155, 155, 155);
+    font-family:sans-serif;
+    line-height: 1.4em;
+    margin: 0px; 
+    overflow: auto;
+}
+
+aside {
+    background-color: #151516;
+    z-index: 1;
+    left: 0;
+    width: 340px; 
+    height: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    box-shadow: 0px 0px 16px 0px #000;
+}
+
+aside section {
+    padding: 8px 18px;
+}
+
+section.welcome {
+    border-bottom: 1px rgb(61, 61, 61) solid;
+    text-align: center;
+}
+
+#welcome {
+    color: whitesmoke;
+    margin-top: 42px;
+    font-size: 22px;
+}
+
+section.authentication {
+    border-bottom: 1px rgb(61, 61, 61) solid;
+}
+
+header {
+    min-width: 700px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    opacity: 0.75;
+}
+
+#wrapper {
+    margin-left: 340px; /* Same as the width of the sidebar */
+}
+
+#main_table {
+    margin: 20px auto;
+}
+
+#main_table td {
+    padding: 20px;
+}
+
+#airplane-cell {
+    min-width: 550px;
+}
+
+#airplane_info {
+    vertical-align:top;
+    animation: anim 2s;
+    letter-spacing: 1.2px;
+}
+
+#legend-table {
+    animation: anim 2s;
+    margin: auto;
+    letter-spacing: 1.2px;
+}
+
+#legend-table td {
+    padding: 5px;
+}
+
+td.description {
+    padding: 40px;
+    color: rgb(21, 21, 22, 0.75);
+}
+
+.legend {
+    display: inline-block;
+}
+
+.square {
+    margin: auto;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+}
+
+#info {
+    animation: anim 4s;
+}
+
+form {
+    display: flex; /* to show content in column */ 
+    flex-direction: column;
+}
+
+button {
+    width: 100%;
+    margin: 42px auto 0px auto;
+    height: 48px;
+    border: none;
+    outline:none;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #2f2f31;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+#logout_button {
+    margin-bottom: 42px;
+}
+
+.purchasedError {
+    display: flex;
+    align-items:center;
+    margin: 12px 0px;
+    padding: 10px;
+    animation: anim 1.5s;
+}
+
+span.info_text {
+    padding: 8px;
+    color: rgb(21, 21, 22, 0.75);
+}
+
+h3.airplane_info {
+    padding: 10px;
+}
+
+noscript {
+    text-align: center;
+}
+h1.noscript {
+    padding: 10px;
+    padding-bottom: 0px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #E40C2B;
+}
+p.noscript {
+    padding: 10px;
+    padding-top: 0px;
+    font-size: 22px;
+    color: #E40C2B;
+}
+
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
